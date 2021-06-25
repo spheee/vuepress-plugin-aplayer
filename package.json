@@ -1,0 +1,16 @@
+{
+  "name": "@hsky/vuepress-plugin-aplayer",
+  "version": "1.0.1",
+  "description": "Aplayer plugin for vuepress",
+  "keywords": [
+    "APlayer",
+    "vuepress",
+    "vue"
+  ],
+  "main": "index.js",
+  "author": "hsky <habxp@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue-aplayer": "^1.6.1"
+  }
+}
