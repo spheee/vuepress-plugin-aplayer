@@ -1,7 +1,13 @@
 const { resolve } = require('path')
 
-module.exports = (options, context) => ({
+module.exports = (options, context) => {
+  console.log(options)
+  return {
   name: 'vuepress-plugin-aplayer',
   enhanceAppFiles: resolve(__dirname, './enhanceAppFile.js'),
-  globalUIComponents: 'APlayer'
-})
+  globalUIComponents: 'HskyAplayer',
+  define: {
+    MUSIC_SETTING: options.music ,
+  }
+}
+}
