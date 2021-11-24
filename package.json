@@ -11,6 +11,7 @@
   "author": "hsky <habxp@163.com>",
   "license": "MIT",
   "dependencies": {
+    "aplayer": "^1.10.1",
     "vue-aplayer": "^1.6.1"
   }
 }

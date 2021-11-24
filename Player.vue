@@ -1,23 +1,32 @@
 <template>
-  <aplayer
-    autoplay
-    mini
-    :music="music"
-  />
+  <div class="vpa" ref="vpa"></div>
 </template>
 
 <script>
-import Aplayer from "vue-aplayer";
+import 'APlayer/dist/APlayer.min.css'
+import APlayer from 'APlayer'
+// import Aplayer from "vue-aplayer";
 export default {
   name: 'HskyAplayer',
-  components:{
-    Aplayer
-  },
-  data(){
+  data() {
     return {
-      music:MUSIC_SETTING
+      music: MUSIC_SETTING
     }
   },
+  mounted() {
+    this.$nextTick(() => {
+      this.ap = new APlayer({
+        container: this.$refs.vpa,
+        preload: 'auto',
+        autoplay: true,
+        audio: [
+          {
+            ...this.music
+          }
+        ]
+      })
+    })
+  }
 }
 </script>
 
