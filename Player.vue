@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import 'APlayer/dist/APlayer.min.css'
-import APlayer from 'APlayer'
+import 'aplayer/dist/APlayer.min.css'
+import APlayer from 'aplayer'
 // import Aplayer from "vue-aplayer";
 export default {
   name: 'HskyAplayer',

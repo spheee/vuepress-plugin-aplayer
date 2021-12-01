@@ -2,16 +2,16 @@
   "name": "@hsky/vuepress-plugin-aplayer",
   "version": "1.0.1",
   "description": "Aplayer plugin for vuepress",
+  "main": "index.js",
   "keywords": [
     "Aplayer",
     "vuepress",
     "vue"
   ],
-  "main": "index.js",
   "author": "hsky <habxp@163.com>",
   "license": "MIT",
   "dependencies": {
-    "aplayer": "^1.10.1",
-    "vue-aplayer": "^1.6.1"
+    "aplayer": "^1.10.1"
   }
+
 }
