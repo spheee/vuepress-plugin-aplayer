@@ -3,8 +3,6 @@
 </template>
 
 <script>
-// import 'aplayer/dist/APlayer.min.css'
-import aplayer from 'aplayer'
 export default {
   name: 'HskyAplayer',
   data() {
@@ -13,18 +11,22 @@ export default {
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      this.ap = new aplayer({
-        container: this.$refs.vpa,
-        preload: 'auto',
-        autoplay: true,
-        audio: [
-          {
-            ...this.music
-          }
-        ]
+    if (!this.$isServer) {
+      this.$nextTick(() => {
+        import('aplayer').then(({default:aplayer}) => {
+          this.ap = new aplayer({
+            container: this.$refs.vpa,
+            preload: 'auto',
+            autoplay: true,
+            audio: [
+              {
+                ...this.music
+              }
+            ]
+          })
+        })
       })
-    })
+    }
   }
 }
 </script>
