@@ -3,9 +3,8 @@
 </template>
 
 <script>
-import 'APlayer/dist/APlayer.min.css'
-import APlayer from 'APlayer'
-// import Aplayer from "vue-aplayer";
+// import 'aplayer/dist/APlayer.min.css'
+import aplayer from 'aplayer'
 export default {
   name: 'HskyAplayer',
   data() {
@@ -15,7 +14,7 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.ap = new APlayer({
+      this.ap = new aplayer({
         container: this.$refs.vpa,
         preload: 'auto',
         autoplay: true,

@@ -1,5 +1,7 @@
-import Player from './Player.vue'
-
-export default ({ Vue }) => {
-	Vue.component('HskyAplayer', Player)
+export default ({ Vue, isServer }) => {
+  if (!isServer) {
+    import('./Player').then((HskyAplayer) => {
+      Vue.component('HskyAplayer', HskyAplayer)
+    })
+  }
 }
