@@ -18,6 +18,7 @@ export default {
             container: this.$refs.vpa,
             preload: 'auto',
             autoplay: true,
+            mini:true,
             audio: [
               {
                 ...this.music
